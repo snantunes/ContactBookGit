@@ -103,7 +103,7 @@ public class ContactBook {
     }
 
     private void resize() {
-        Contact tmp[] = new Contact[2*contacts.length];
+        Contact[] tmp = new Contact[2*contacts.length];
         for (int i=0;i<counter; i++)
             tmp[i] = contacts[i];
         contacts = tmp;
