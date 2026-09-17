@@ -15,6 +15,17 @@ public class ContactBook {
         currentContact = -1;
     }
 
+    /**
+     *
+     * @return true se houver mais que um contacto com o mesmo número
+     */
+    public boolean epCommand() {
+        for (int i = 0; i < contacts.length; i++) {
+
+        }
+        return true;
+    }
+
     //Pre: name != null
     public boolean hasContact(String name) {
         return searchIndex(name) >= 0;

@@ -13,6 +13,7 @@ public class Main {
     public static final String SET_PHONE      = "SP";
     public static final String SET_EMAIL      = "SE";
     public static final String LIST_CONTACTS  = "LC";
+    public static final String EP_COMMAND = "EP";
     public static final String QUIT           = "Q";
 
     //Constantes que definem as mensagens para o utilizador
@@ -32,6 +33,9 @@ public class Main {
 
         while (!comm.equals(QUIT)){
             switch (comm) {
+                case EP_COMMAND:
+                    epCommand(cBook);
+                    break;
                 case ADD_CONTACT:
                     addContact(in,cBook);
                     break;
@@ -69,6 +73,13 @@ public class Main {
 
         input = in.nextLine().toUpperCase();
         return input;
+    }
+
+    private static void epCommand(ContactBook cBook) {
+        if (cBook.epCommand())
+            System.out.println("There are contacts that share phone numbers.");
+        else
+            System.out.println("All contacts have different phone numbers");
     }
 
     private static void addContact(Scanner in, ContactBook cBook) {
