@@ -84,7 +84,7 @@ public class Main {
         if (cBook.epCommand())
             System.out.println("There are contacts that share phone numbers.");
         else
-            System.out.println("All contacts have different phone numbers");
+            System.out.println("All contacts have different phone numbers.");
     }
 
     private static void addContact(Scanner in, ContactBook cBook) {

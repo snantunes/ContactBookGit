@@ -20,10 +20,14 @@ public class ContactBook {
      * @return true se houver mais que um contacto com o mesmo número
      */
     public boolean epCommand() {
-        for (int i = 0; i < contacts.length; i++) {
-
+        for (int i = 0 ; i + 1 < counter; i++) {
+            for(int j = i+1 ; j < counter; j++) {
+                if (contacts[i].getPhone() == contacts[j].getPhone()) {
+                    return true;
+                }
+            }
         }
-        return true;
+        return false;
     }
 
     //Pre: name != null
